@@ -1,0 +1,89 @@
+\documentclass[t]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym,graphicx,color,eso-pic,psfrag}
+\usepackage{pgf,tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{amssymb,amsmath}
+\usepackage{upgreek}
+\usepackage{subfig}
+\newcommand{\comment}[1]{}
+\newcommand{\ucomment}[1]{#1}
+\usepackage{color}
+\usetheme{default}
+\useinnertheme{rectangles}
+\useoutertheme{infolines}
+\definecolor{rwthdarkblue}{RGB}{0,84,159}
+\definecolor{rwthlightblue}{RGB}{142, 186, 229}
+\setbeamercolor{palette primary}{fg=black}
+\setbeamercolor{palette secondary}{fg=black}
+\setbeamercolor{palette tertiary}{fg=rwthdarkblue}
+\setbeamercolor{palette quaternary}{fg=black}
+\setbeamercolor{frametitle}{fg=black}
+%\setbeamercolor{separation line}{bg=rwthdarkblue}
+\setbeamercolor{title}{fg=rwthdarkblue}
+\setbeamerfont{frametitle}{size=\Large}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle}{
+\hfill\insertframetitle\hfill\includegraphics[height=0.8cm]{aialogo.eps}\\
+\vspace*{-5mm}
+\textcolor{black}{\hrule}
+}
+\usebackgroundtemplate{\hfill\includegraphics[height=\paperheight,width=\paperwidth]{wasserzeichen.eps}\hfill}
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \vfill
+  \begin{center}
+    \usebeamercolor[fg]{palette primary}\usebeamerfont{title}Hyptrans Project Meeting\par
+    \bigskip
+    \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\par
+    \bigskip
+    \usebeamercolor[fg]{palette primary}\usebeamerfont{author}\insertauthor\par
+    \bigskip
+    \usebeamerfont{institute}\insertinstitute\par
+  \end{center}
+  \vfill
+}
+\defbeamertemplate*{footline}{customized}{
+\hfill\insertshortdate\hspace*{0.01\textwidth}
+}
+
+
+\title{Numerical Analysis of Transition in Hypersonic Boundary Layers of Generic Reentry Vehicles}
+\author{Thomas Schilden}
+\institute{Institute of Aerodynamics\\RWTH Aachen University}
+\date{\today}
+
+
+
+\begin{document}
+%
+\frame{\titlepage}
+\usebackgroundtemplate{}
+%
+\setcounter{framenumber}{0}
+\defbeamertemplate*{footline}{custom}{
+\hfill\insertshortdate \hspace*{0.05\textwidth} \insertframenumber{} of \inserttotalframenumber\hspace*{0.01\textwidth}
+}
+%
+\begin{frame}
+\frametitle{Introduction}
+\begin{block}{Previous Investigations and Results:}
+\begin{itemize}
+ \item Interaction of linear waves
+ \item Waves are refracted and generated
+ \item Flowfield is significantly altered by the wedge in comparison to the pure wave interaction
+\end{itemize}
+\end{block}
+\begin{block}{Current Investigations and Results:}
+\begin{itemize}
+ \item Influence of the limiter
+ \item Effects of Sr-Number and wave incident angle on the receptivity
+ \item 3D simulations
+\end{itemize}
+\end{block}
+\end{frame}
+\end{document}
+
